@@ -13,6 +13,8 @@
 		868A767C1F43535700A43F78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 868A767A1F43535700A43F78 /* Main.storyboard */; };
 		868A767E1F43535700A43F78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 868A767D1F43535700A43F78 /* Assets.xcassets */; };
 		868A76811F43535700A43F78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 868A767F1F43535700A43F78 /* LaunchScreen.storyboard */; };
+		868A7A551F435D9900A43F78 /* HogwartsNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868A7A541F435D9900A43F78 /* HogwartsNode.swift */; };
+		86D0FDDA1F43D6800053BBF8 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D0FDD91F43D6800053BBF8 /* Plane.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		868A767D1F43535700A43F78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		868A76801F43535700A43F78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		868A76821F43535700A43F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		868A7A541F435D9900A43F78 /* HogwartsNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HogwartsNode.swift; sourceTree = "<group>"; };
+		86D0FDD91F43D6800053BBF8 /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +44,9 @@
 		868A76681F43535700A43F78 = {
 			isa = PBXGroup;
 			children = (
+				868A76741F43535700A43F78 /* AppDelegate.swift */,
 				868A76731F43535700A43F78 /* HogwartsAR */,
+				86D0FDD71F43D3300053BBF8 /* Assets */,
 				868A76721F43535700A43F78 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,15 +62,31 @@
 		868A76731F43535700A43F78 /* HogwartsAR */ = {
 			isa = PBXGroup;
 			children = (
-				868A76741F43535700A43F78 /* AppDelegate.swift */,
-				868A76761F43535700A43F78 /* art.scnassets */,
+				86D0FDD81F43D57C0053BBF8 /* Nodes */,
 				868A76781F43535700A43F78 /* ViewController.swift */,
-				868A767A1F43535700A43F78 /* Main.storyboard */,
-				868A767D1F43535700A43F78 /* Assets.xcassets */,
-				868A767F1F43535700A43F78 /* LaunchScreen.storyboard */,
 				868A76821F43535700A43F78 /* Info.plist */,
 			);
 			path = HogwartsAR;
+			sourceTree = "<group>";
+		};
+		86D0FDD71F43D3300053BBF8 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				868A767A1F43535700A43F78 /* Main.storyboard */,
+				868A76761F43535700A43F78 /* art.scnassets */,
+				868A767D1F43535700A43F78 /* Assets.xcassets */,
+				868A767F1F43535700A43F78 /* LaunchScreen.storyboard */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		86D0FDD81F43D57C0053BBF8 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				868A7A541F435D9900A43F78 /* HogwartsNode.swift */,
+				86D0FDD91F43D6800053BBF8 /* Plane.swift */,
+			);
+			path = Nodes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +161,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				868A7A551F435D9900A43F78 /* HogwartsNode.swift in Sources */,
 				868A76791F43535700A43F78 /* ViewController.swift in Sources */,
+				86D0FDDA1F43D6800053BBF8 /* Plane.swift in Sources */,
 				868A76751F43535700A43F78 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,7 +304,7 @@
 				DEVELOPMENT_TEAM = N6A2S4TCDQ;
 				INFOPLIST_FILE = HogwartsAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.redpanda.HogwartsAR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.redpanda.HogwartsARKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -294,7 +318,7 @@
 				DEVELOPMENT_TEAM = N6A2S4TCDQ;
 				INFOPLIST_FILE = HogwartsAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.redpanda.HogwartsAR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.redpanda.HogwartsARKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

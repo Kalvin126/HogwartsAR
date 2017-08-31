@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iYN-cB-qbu">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="kK2-vW-sKd">
+            <objects>
+                <viewController id="iYN-cB-qbu" customClass="ViewController" customModule="HogwartsAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rzs-rq-ECY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="40E-Is-Zhq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hPG-O8-Ywc">
+                                <rect key="frame" x="0.0" y="599.5" width="375" height="59.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jql-v6-SFO">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="59.5"/>
+                                        <subviews>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qYa-7H-k3f">
+                                                <rect key="frame" x="38" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.20412406985675258" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="tappedShowPlaneSwitch:" destination="iYN-cB-qbu" eventType="valueChanged" id="n9A-XI-IKP"/>
+                                                </connections>
+                                            </switch>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show Planes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYN-PP-lMV">
+                                                <rect key="frame" x="14" y="39" width="97.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3cd-sF-9OB">
+                                        <rect key="frame" x="125" y="0.0" width="125" height="59.5"/>
+                                        <subviews>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yKw-bY-yQK">
+                                                <rect key="frame" x="38" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.20412406990000001" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="tappedPlaneDetectionSwitch:" destination="iYN-cB-qbu" eventType="valueChanged" id="9UM-Lb-maQ"/>
+                                                </connections>
+                                            </switch>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detect Planes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBw-T9-sto">
+                                                <rect key="frame" x="9.5" y="39" width="106.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="VOr-VV-DjI">
+                                        <rect key="frame" x="250" y="0.0" width="125" height="59.5"/>
+                                        <subviews>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.0050000000000000001" maximumValue="2" stepValue="0.001" translatesAutoresizingMaskIntoConstraints="NO" id="iIi-yn-lYf">
+                                                <rect key="frame" x="15.5" y="0.0" width="94" height="29"/>
+                                                <color key="tintColor" red="0.20412406990000001" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="scaleStepperChanged:" destination="iYN-cB-qbu" eventType="valueChanged" id="dKA-Iq-pF0"/>
+                                                </connections>
+                                            </stepper>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scale: 0.005" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGm-aU-WKO">
+                                                <rect key="frame" x="15" y="38" width="95.5" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uJI-Rq-s56" firstAttribute="trailing" secondItem="hPG-O8-Ywc" secondAttribute="trailing" id="DDh-SF-1Xs"/>
+                            <constraint firstItem="40E-Is-Zhq" firstAttribute="leading" secondItem="uJI-Rq-s56" secondAttribute="leading" id="KhT-wS-8u2"/>
+                            <constraint firstItem="uJI-Rq-s56" firstAttribute="bottom" secondItem="hPG-O8-Ywc" secondAttribute="bottom" constant="8" id="Le7-JG-LxQ"/>
+                            <constraint firstItem="40E-Is-Zhq" firstAttribute="bottom" secondItem="uJI-Rq-s56" secondAttribute="bottom" id="O8d-he-MfH"/>
+                            <constraint firstItem="hPG-O8-Ywc" firstAttribute="leading" secondItem="uJI-Rq-s56" secondAttribute="leading" id="ODv-ra-Oxa"/>
+                            <constraint firstItem="40E-Is-Zhq" firstAttribute="trailing" secondItem="uJI-Rq-s56" secondAttribute="trailing" id="WTv-2k-AHX"/>
+                            <constraint firstItem="40E-Is-Zhq" firstAttribute="top" secondItem="Rzs-rq-ECY" secondAttribute="top" id="Wle-SG-UcX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uJI-Rq-s56"/>
+                    </view>
+                    <connections>
+                        <outlet property="scaleLabel" destination="qGm-aU-WKO" id="6aN-V8-pzX"/>
+                        <outlet property="scaleStepper" destination="iIi-yn-lYf" id="9U1-4g-X4N"/>
+                        <outlet property="sceneView" destination="40E-Is-Zhq" id="29t-zE-NaU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pr6-6C-0x0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="182.5" y="-331.5"/>
+        </scene>
+    </scenes>
+</document>
